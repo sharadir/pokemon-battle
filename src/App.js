@@ -1,7 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import { useStores } from './stores/hooks/hooks';
+
 
 function App() {
+
+  const { userStore } = useStores();
   return (
     <div className="App">
       <header className="App-header">
