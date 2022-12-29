@@ -1,7 +1,8 @@
-import { UserStore } from './userStore';
+
 import { UiStore } from './uiStore';
+import { BattleStore } from './battleStore';
 
 export class RootStore {
-  userStore: UserStore = new UserStore(this);
   uiStore: UiStore = new UiStore(this);
+  battleStore: BattleStore = new BattleStore(this);
 }

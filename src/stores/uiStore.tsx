@@ -44,9 +44,28 @@ export class UiStore {
     }
   };
 
+  getPokemonById = (id: number): Pokemon => {
+      if(this.pokemons.length > id && id > 0){
+        return this.pokemons[id]
+      }
+      else {
+        //return default pokemon
+        return { name: '', image:''}
+      }
+  };
+
+  getRandomPokemon = (): Pokemon => {
+    if(this.pokemons.length > 0){
+      return this.pokemons[Math.floor((Math.random()*this.pokemons.length))]
+    }
+    else {
+      //return default pokemon
+      return { name: '', image:''}
+    }
+  };
+
   initData = () => {
      this.getPokemons();
   };
-
   
 }

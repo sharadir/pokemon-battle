@@ -1,27 +1,44 @@
 
+body,
+html {
+     height: 100%; 
+}
 
 img:hover {
   cursor: pointer;
 }
 
-.Battle-wrapper {
-  background-color: #f2f3f6;
-  min-height: 100vh;
-  display: flex;
+.header { grid-area: header; }
+.player { grid-area: player; }
+.score { 
+  grid-area: score; 
+}
+
+.score-container { 
+  direction: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  grid-area: score; 
+}
+
+.opponent { grid-area: opponent; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'player player score score opponent opponent';
+  gap: 10px;
+  background-color: rgb(65, 235, 178);
+  padding: 10px;
+  font-size: 3rem;
   color: white;
 }
 
-.Battle-header {
-  background-color: rgb(65, 235, 178);
-  color:"gray";
-  position: fixed;
-  font-size: 3rem;
-  top: 0;
-  padding:1vmin;
-  z-index: 1;
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 1rem;
+  color: white;
 }
 

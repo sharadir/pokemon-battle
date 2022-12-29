@@ -5,6 +5,6 @@ export const rootStore = new RootStore();
 
 export const storesContext = React.createContext({
   rootStore,
-  userStore: rootStore.userStore,
+  battleStore: rootStore.battleStore,
   uiStore: rootStore.uiStore,
 });
