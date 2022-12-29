@@ -4,7 +4,7 @@ img:hover {
   cursor: pointer;
 }
 
-.Intro-wrapper {
+.Battle-wrapper {
   background-color: #f2f3f6;
   min-height: 100vh;
   display: flex;
@@ -15,7 +15,7 @@ img:hover {
   color: white;
 }
 
-.Intro-header {
+.Battle-header {
   background-color: rgb(65, 235, 178);
   color:"gray";
   position: fixed;

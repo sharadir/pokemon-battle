@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 import './App.css';
 import Intro from './pages/Intro';
+import Battle from './pages/Battle';
 import { useStores } from './stores/hooks/hooks';
 
 function App() {
@@ -12,11 +14,14 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <header className="App-header">
-       <Intro/>
-      </header>
-    </div>
+    <React.Fragment>
+        <BrowserRouter>
+            <Routes>
+              <Route path='/battle' element={<Battle/>} />
+              <Route path='*' element={<Intro/>} />
+            </Routes>
+        </BrowserRouter>
+  </React.Fragment>
   );
 }
 
