@@ -1,0 +1,16 @@
+
+
+img:hover {
+  cursor: pointer;
+}
+
+.Intro-header {
+  background-color: rgb(65, 235, 178);
+  color:"gray";
+  position: fixed;
+  font-size: 3rem;
+  top: 0;
+  padding:1vmin;
+  z-index: 1;
+}
+
